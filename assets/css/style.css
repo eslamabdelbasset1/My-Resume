@@ -1046,8 +1046,13 @@ section {
   font-size: 14px;
   color: #728394;
 }
-
-.contact .info .email,
+.contact .info p a{
+  color: #728394;
+}
+.contact .info p a:hover{
+  color: #007bf1;
+}
+.contact .info .ema,il,
 .contact .info .phone {
   margin-top: 40px;
 }
