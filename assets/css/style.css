@@ -786,6 +786,21 @@ section {
   padding: 0;
 }
 
+#portfolio a {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+#portfolio a:hover{
+  color: #0563bb;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
