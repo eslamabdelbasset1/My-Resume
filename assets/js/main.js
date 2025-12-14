@@ -132,6 +132,9 @@
   /**
    * Hero type effect
    */
+  /**
+   * Hero type effect
+   */
   const typed = select('.typed')
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
@@ -139,28 +142,20 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+      typeSpeed: 80, // Slightly slower for readability
+      backSpeed: 60,
+      backDelay: 2500, // Longer pause to read the title
+      showCursor: true,
+      cursorChar: '|',
+      autoInsertCss: true
     });
   }
 
   /**
-   * Skills animation
+   * Skills animation - DEPRECATED
+   * Replaced with Skill Badges in new UI.
    */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
+
 
   /**
    * Porfolio isotope and filter
@@ -259,5 +254,45 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  /**
+   * Theme Toggle Logic
+   */
+  const themeToggleBtn = select('.theme-toggle-btn');
+  if (themeToggleBtn) {
+    const themeIcon = themeToggleBtn.querySelector('i');
+    
+    const enableLightMode = () => {
+      document.body.setAttribute('data-theme', 'light');
+      if (themeIcon) {
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon');
+      }
+      localStorage.setItem('theme', 'light');
+    }
+
+    const enableDarkMode = () => {
+      document.body.removeAttribute('data-theme');
+      if (themeIcon) {
+         themeIcon.classList.remove('bi-moon');
+         themeIcon.classList.add('bi-sun');
+      }
+      localStorage.setItem('theme', 'dark');
+    }
+
+    // Check preference on load
+    if (localStorage.getItem('theme') === 'light') {
+      enableLightMode();
+    }
+
+    on('click', '.theme-toggle-btn', function(e) {
+      const isLight = document.body.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        enableDarkMode();
+      } else {
+        enableLightMode();
+      }
+    });
+  }
 
 })()
