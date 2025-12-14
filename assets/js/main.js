@@ -1,5 +1,60 @@
+/**
+ * Portfolio Main JavaScript
+ * Theme Toggle, Navigation, Animations, and Portfolio Filtering
+ */
 (function() {
   "use strict";
+
+  // ==============================================
+  // FORCE SCROLL TO HERO ON LOAD/REFRESH
+  // ==============================================
+  
+  // Disable browser scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Immediate scroll to top (before anything renders)
+  window.scrollTo(0, 0);
+
+  // Remove URL hash on refresh (unless it's #hero)
+  if (window.location.hash && window.location.hash !== '#hero') {
+    history.replaceState(null, null, window.location.pathname);
+  }
+
+  // ==============================================
+  // THEME TOGGLE FUNCTIONALITY
+  // ==============================================
+  
+  const themeToggle = document.querySelector('.theme-toggle-btn');
+  const body = document.body;
+  
+  // Check for saved theme preference or default to 'light' mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  body.classList.toggle('light-theme', currentTheme === 'light');
+  updateThemeIcon();
+  
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    const theme = body.classList.contains('light-theme') ? 'light' : 'dark';
+    localStorage.setItem('theme', theme);
+    updateThemeIcon();
+  });
+  
+  function updateThemeIcon() {
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('light-theme')) {
+      icon.classList.remove('bi-sun');
+      icon.classList.add('bi-moon');
+    } else {
+      icon.classList.remove('bi-moon');
+      icon.classList.add('bi-sun');
+    }
+  }
+
+  // ==============================================
+  // HELPER FUNCTIONS
+  // ==============================================
 
   /**
    * Easy selector helper function
@@ -35,6 +90,21 @@
   }
 
   /**
+   * Scrolls to an element with header offset
+   */
+  const scrollto = (el) => {
+    let elementPos = select(el).offsetTop
+    window.scrollTo({
+      top: elementPos,
+      behavior: 'smooth'
+    })
+  }
+
+  // ==============================================
+  // NAVBAR ACTIVE STATE
+  // ==============================================
+
+  /**
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
@@ -54,16 +124,9 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos,
-      behavior: 'smooth'
-    })
-  }
+  // ==============================================
+  // BACK TO TOP BUTTON
+  // ==============================================
 
   /**
    * Back to top button
@@ -81,6 +144,10 @@
     onscroll(document, toggleBacktotop)
   }
 
+  // ==============================================
+  // MOBILE NAVIGATION
+  // ==============================================
+
   /**
    * Mobile nav toggle
    */
@@ -91,7 +158,7 @@
   })
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -108,32 +175,47 @@
     }
   }, true)
 
+  // ==============================================
+  // PAGE LOAD HANDLING
+  // ==============================================
+
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Handle scroll on page load
+   * - If no hash or hash is #hero: scroll to top
+   * - Otherwise: scroll to the hash section
    */
   window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
+    // Force scroll to hero section on page load/refresh
+    setTimeout(() => {
+      if (!window.location.hash || window.location.hash === '#hero') {
+        // Scroll to top (hero section)
+        window.scrollTo({
+          top: 0,
+          behavior: 'auto'
+        });
+
+        // Ensure hero nav link is active
+        navbarlinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#hero') {
+            link.classList.add('active');
+          }
+        });
+      } else {
+        // If there's a different hash, scroll to that section
+        if (select(window.location.hash)) {
+          scrollto(window.location.hash)
+        }
       }
-    }
+    }, 100);
   });
 
-  /**
-   * Preloader
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
+  // ==============================================
+  // TYPED TEXT EFFECT
+  // ==============================================
 
   /**
-   * Hero type effect
-   */
-  /**
-   * Hero type effect
+   * Hero typed text effect
    */
   const typed = select('.typed')
   if (typed) {
@@ -142,23 +224,34 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 80, // Slightly slower for readability
-      backSpeed: 60,
-      backDelay: 2500, // Longer pause to read the title
-      showCursor: true,
-      cursorChar: '|',
-      autoInsertCss: true
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
     });
   }
 
+  // ==============================================
+  // ANIMATION ON SCROLL (AOS)
+  // ==============================================
+
   /**
-   * Skills animation - DEPRECATED
-   * Replaced with Skill Badges in new UI.
+   * Animation on scroll
    */
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  });
 
+  // ==============================================
+  // PORTFOLIO ISOTOPE AND FILTER
+  // ==============================================
 
   /**
-   * Porfolio isotope and filter
+   * Portfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
@@ -184,23 +277,17 @@
         });
       }, true);
     }
-
   });
+
+  // ==============================================
+  // LIGHTBOX AND SLIDER
+  // ==============================================
 
   /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
   });
 
   /**
@@ -220,79 +307,4 @@
     }
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
-  /**
-   * Theme Toggle Logic
-   */
-  const themeToggleBtn = select('.theme-toggle-btn');
-  if (themeToggleBtn) {
-    const themeIcon = themeToggleBtn.querySelector('i');
-    
-    const enableLightMode = () => {
-      document.body.setAttribute('data-theme', 'light');
-      if (themeIcon) {
-        themeIcon.classList.remove('bi-sun');
-        themeIcon.classList.add('bi-moon');
-      }
-      localStorage.setItem('theme', 'light');
-    }
-
-    const enableDarkMode = () => {
-      document.body.removeAttribute('data-theme');
-      if (themeIcon) {
-         themeIcon.classList.remove('bi-moon');
-         themeIcon.classList.add('bi-sun');
-      }
-      localStorage.setItem('theme', 'dark');
-    }
-
-    // Check preference on load
-    if (localStorage.getItem('theme') === 'light') {
-      enableLightMode();
-    }
-
-    on('click', '.theme-toggle-btn', function(e) {
-      const isLight = document.body.getAttribute('data-theme') === 'light';
-      if (isLight) {
-        enableDarkMode();
-      } else {
-        enableLightMode();
-      }
-    });
-  }
-
-})()
+})();
