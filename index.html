@@ -1,1074 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
-  <title>Eslam Abdelbasset | Software Engineer & Senior Back-end Developer</title>
-  <meta content="Senior Back-end Developer specializing in Laravel, Multi-Tenant SaaS Architecture, and ERP Systems. Building scalable enterprise solutions." name="description">
-  <meta content="Software Engineer, Backend Developer, Laravel Expert, PHP Developer, API Development, Multi-Tenant Architecture" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eslam Abdelbasset | Senior Back-end Engineer</title>
+    <meta name="description" content="Senior Back-end Developer specializing in Laravel, Multi-Tenant SaaS Architecture, and ERP Systems. Building scalable enterprise solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="alternate icon" href="assets/img/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
-  <!-- Theme Toggle Button -->
-  <button type="button" class="theme-toggle-btn" aria-label="Toggle Theme">
-    <i class="bi bi-sun"></i>
-  </button>
-  
-  <!-- Mobile Navigation Toggle -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
 
-  <!-- Header / Navigation -->
-  <header id="header" class="d-flex flex-column justify-content-center">
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#featured" class="nav-link scrollto"><i class="bx bx-star"></i> <span>Projects</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Tech Stack</span></a></li>
-        <li><a href="#experience" class="nav-link scrollto"><i class="bx bx-briefcase"></i> <span>Experience</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">&lt;Eslam<span>.Dev</span> /&gt;</a>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="assets/cv/islamAbdelbasset-Resume.pdf" class="btn btn-primary" download target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Resume</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Eslam Abdelbasset</h1>
-      <h2 class="role-title">Software Engineer | Senior Back-end Developer</h2>
-      <p class="specialization">Specializing in Laravel • Multi-Tenant SaaS Architecture • Enterprise ERP Systems</p>
-      
-      <!-- Quick Stats -->
-      <div class="quick-stats">
-        <div class="stat-item">
-          <strong>5+</strong>
-          <span>Years Experience</span>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="role">Software Engineer | Senior Back-end Developer</span>
+                <h1>Building Scalable <span class="text-primary">Multi-Tenant SaaS</span> & Enterprise Solutions.</h1>
+                <p class="lead">over 5 years of experience architecting distributed systems, optimizing high-performance APIs, and leading development teams in the ERP space.</p>
+                
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects <i data-lucide="arrow-right" size="18"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="stat-item">
-          <strong>20+</strong>
-          <span>Projects Delivered</span>
-        </div>
-        <div class="stat-item">
-          <strong>8+</strong>
-          <span>ERP Domains</span>
-        </div>
-      </div>
-
-      <!-- Social Links -->
-      <div class="social-links">
-        <a href="https://github.com/eslamabdelbasset1" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/eslamabdelbasset/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://wa.me/201060838210" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-        <a href="https://www.facebook.com/eslam3bdelbasset" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/eslamabdelbasset1/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://twitter.com/eslamabasset" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="about-btns">
-        <a href="assets/cv/islamAbdelbasset-Resume.pdf" class="btn btn-primary" download>
-          <i class='bx bxs-download'></i>
-          Download Resume
-          <span class="file-badge">PDF • ATS-Friendly</span>
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class='bx bxl-telegram'></i>
-          Hire Me
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <main id="main">
-    <!-- Featured Projects Section -->
-    <section id="featured" class="featured-projects">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Featured Projects</h2>
-          <p>Enterprise-level solutions demonstrating scalable architecture and clean code practices</p>
-        </div>
-
-       <!-- Project 1: Loc Camp - Current Position -->
-      <div class="project-card featured" data-aos="fade-up" data-aos-delay="100">
-        <div class="project-header">
-          <span class="tag enterprise">Enterprise Development</span>
-          <span class="tag current">Current Role</span>
-          <span class="tag hybrid">Hybrid</span>
-        </div>
-        <h3>Software Engineer | Senior Back-end Developer</h3>
-        <p class="company"><i class='bx bx-buildings'></i> Loc Camp, Al Jizah, Egypt | Oct 2025 – Present</p>
-        <p class="description">
-          Starting my journey as a Software Engineer at Loc Camp, focused on delivering high-performance backend solutions 
-          and driving innovation through modern development practices. Building scalable systems with emphasis on code quality, 
-          performance optimization, and innovative technical solutions.
-        </p>
-        
-        <div class="tech-used">
-          <span><i class='bx bxl-laravel'></i> Laravel</span>
-          <span><i class='bx bxl-php'></i> PHP 8+</span>
-          <span><i class='bx bxs-data'></i> MySQL</span>
-          <span><i class='bx bxl-redis'></i> Redis</span>
-          <span><i class='bx bx-code-alt'></i> RESTful API</span>
-          <span><i class='bx bxl-git'></i> Git</span>
-          <span><i class='bx bxl-docker'></i> Docker</span>
-        </div>
-
-        <div class="project-impact">
-          <h4><i class='bx bx-trending-up'></i> Focus Areas</h4>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Backend architecture design and development with Laravel framework</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Performance optimization and scalable system implementation</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Innovation-driven solutions with modern development practices</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Code quality assurance and technical excellence</span>
-          </div>
-        </div>
-
-        <div class="project-links">
-          <a href="#contact" class="btn-outline">Get In Touch</a>
-        </div>
-      </div>
-
-      <!-- Project 2: Alsamel Holding - Previous Position -->
-      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="project-header">
-          <span class="tag enterprise">Enterprise ERP</span>
-          <span class="tag production">Production</span>
-        </div>
-        <h3>Multi-Domain ERP System</h3>
-        <p class="company"><i class='bx bx-buildings'></i> Alsamel Holding Co., Kuwait | Apr 2024 – Sep 2025</p>
-        <p class="description">
-          Led end-to-end architecture and development of a comprehensive multi-tenant ERP platform serving 8+ business domains 
-          including Real Estate Management, Hotel Management System (HMS), HR Management, Booking Systems, Club Membership, 
-          Board Rentals, Document Archiving, and Stock Management.
-        </p>
-        
-        <div class="tech-used">
-          <span><i class='bx bxl-laravel'></i> Laravel 10</span>
-          <span><i class='bx bx-data'></i> Multi-Tenancy</span>
-          <span><i class='bx bxs-data'></i> MySQL</span>
-          <span><i class='bx bxl-redis'></i> Redis</span>
-          <span><i class='bx bxl-vuejs'></i> Vue.js</span>
-          <span><i class='bx bxl-docker'></i> Docker</span>
-          <span><i class='bx bxl-aws'></i> AWS</span>
-        </div>
-
-        <div class="project-impact">
-          <h4><i class='bx bx-trending-up'></i> Key Achievements</h4>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Architected scalable multi-tenant infrastructure serving 500+ concurrent users</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Improved operational workflow efficiency by 60% through automation</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Integrated 8 business domains into unified system with RESTful APIs</span>
-          </div>
-          <div class="impact-item">
-            <i class='bx bx-check-circle'></i>
-            <span>Mentored 3 junior developers in Laravel best practices and architecture</span>
-          </div>
-        </div>
-
-        <div class="project-links">
-          <a href="#contact" class="btn-outline">Learn More</a>
-        </div>
-      </div>
-
-
-        <!-- Project 2: EgyptAir System -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="project-header">
-            <span class="tag production">Production</span>
-            <span class="tag corporate">Corporate</span>
-          </div>
-          <h3>EgyptAir – Air Hospitality Administrative System</h3>
-          <p class="company"><i class='bx bx-buildings'></i> EgyptAir, Cairo | Jan 2022 – Dec 2023</p>
-          <p class="description">
-            Developed and deployed a comprehensive administrative system for EgyptAir's Air Hospitality Sector, 
-            digitizing manual processes for employee management, document evaluation, and operational tracking.
-          </p>
-          
-          <div class="tech-used">
-            <span><i class='bx bxl-laravel'></i> Laravel</span>
-            <span><i class='bx bxs-data'></i> MySQL</span>
-            <span><i class='bx bxl-javascript'></i> JavaScript</span>
-            <span><i class='bx bxl-bootstrap'></i> Bootstrap</span>
-          </div>
-
-          <div class="project-impact">
-            <h4><i class='bx bx-trending-up'></i> Key Achievements</h4>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Reduced document processing time by 45% through automation</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Digitized employee evaluation system for 200+ staff members</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Implemented secure document management with role-based access control</span>
-            </div>
-          </div>
-
-          <div class="project-links">
-            <a href="assets/img/portfolio/project9.png" class="btn-outline" data-glightbox>View Screenshots</a>
-          </div>
-        </div>
-
-        <!-- Project 3: Impact Studios CMS -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="project-header">
-            <span class="tag live">Live</span>
-            <span class="tag cms">CMS</span>
-          </div>
-          <h3>Impact Studios – Content Management System</h3>
-          <p class="company"><i class='bx bx-buildings'></i> Impact Studios, UK | Mar 2021 – Dec 2021</p>
-          <p class="description">
-            Built a custom CMS platform for managing creative projects, client portfolios, and team collaboration with real-time updates.
-          </p>
-          
-          <div class="tech-used">
-            <span><i class='bx bxl-laravel'></i> Laravel</span>
-            <span><i class='bx bxs-data'></i> MySQL</span>
-            <span><i class='bx bx-code-alt'></i> RESTful API</span>
-            <span><i class='bx bxl-bootstrap'></i> Bootstrap</span>
-          </div>
-
-          <div class="project-impact">
-            <h4><i class='bx bx-trending-up'></i> Key Achievements</h4>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Developed responsive UI with cross-browser compatibility</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Implemented real-time collaboration features for team workflow</span>
-            </div>
-          </div>
-
-          <div class="project-links">
-            <a href="https://impactstudio.uk" target="_blank" class="btn-primary"><i class='bx bx-link-external'></i> View Live Site</a>
-          </div>
-        </div>
-
-      
-         <!-- Freelance Projects Section Header -->
-        <div class="freelance-section-divider" data-aos="fade-up" data-aos-delay="300">
-          <h3><i class='bx bx-briefcase-alt'></i> Freelance Projects</h3>
-          <p>Selected client work demonstrating diverse technical expertise</p>
-        </div>
-
-        <!-- Freelance Project 1: Tog.sa -->
-        <div class="project-card freelance" data-aos="fade-up" data-aos-delay="400">
-          <div class="project-header">
-            <span class="tag freelance">Freelance</span>
-            <span class="tag live">Live</span>
-            <span class="tag saas">SaaS Platform</span>
-          </div>
-          <h3>Tog.sa - Cloud Accounting System</h3>
-          <p class="company"><i class='bx bx-world'></i> Saudi Arabia | Freelance Project</p>
-          <p class="description">
-            Developed a comprehensive cloud-based accounting system (نظام محاسبي سحابي) for Saudi market, 
-            compliant with ZATCA requirements for electronic invoicing and VAT. The platform manages sales, 
-            inventory, purchases, payroll, and financial reporting with multi-branch support and real-time synchronization.
-          </p>
-          
-          <div class="tech-used">
-            <span><i class='bx bxl-laravel'></i> Laravel</span>
-            <span><i class='bx bxs-data'></i> MySQL</span>
-            <span><i class='bx bxl-vuejs'></i> Vue.js</span>
-            <span><i class='bx bx-mobile-alt'></i> Mobile App</span>
-            <span><i class='bx bx-receipt'></i> E-Invoice</span>
-            <span><i class='bx bx-qr'></i> QR Code</span>
-            <span><i class='bx bx-cloud'></i> Cloud</span>
-          </div>
-
-          <div class="project-impact">
-            <h4><i class='bx bx-trending-up'></i> Key Features</h4>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Multi-branch management with real-time data synchronization</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>ZATCA-compliant electronic invoicing with QR code generation</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Comprehensive POS system with inventory and financial management</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Mobile-responsive interface with native mobile app support</span>
-            </div>
-          </div>
-
-          <div class="project-links">
-            <a href="https://tog.sa/" target="_blank" class="btn-primary">
-              <i class='bx bx-link-external'></i> Visit Site
-            </a>
-          </div>
-        </div>
-
-        <!-- Freelance Project 2: AliBash URL Shortener -->
-        <div class="project-card freelance" data-aos="fade-up" data-aos-delay="500">
-          <div class="project-header">
-            <span class="tag freelance">Freelance</span>
-            <span class="tag live">Live</span>
-            <span class="tag web-app">Web App</span>
-          </div>
-          <h3>AliBash Cloud Accounting System</h3>
-          <p class="company"><i class='bx bx-world'></i> s.alibash.com | Freelance Project</p>
-          <p class="description">
-            Built a high-performance URL shortening service with custom short links, analytics tracking, 
-            and link management dashboard. Features include click analytics, geographic data tracking, 
-            QR code generation, and API integration for developers.
-          </p>
-          
-          <div class="tech-used">
-            <span><i class='bx bxl-laravel'></i> Laravel</span>
-            <span><i class='bx bxs-data'></i> MySQL</span>
-            <span><i class='bx bxl-redis'></i> Redis Cache</span>
-            <span><i class='bx bx-code-alt'></i> RESTful API</span>
-            <span><i class='bx bx-line-chart'></i> Analytics</span>
-            <span><i class='bx bx-qr'></i> QR Generator</span>
-          </div>
-
-          <div class="project-impact">
-            <h4><i class='bx bx-trending-up'></i> Key Features</h4>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Custom short URL generation with collision-free algorithm</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Real-time click tracking and geographic analytics dashboard</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>Redis caching for high-performance link redirection</span>
-            </div>
-            <div class="impact-item">
-              <i class='bx bx-check-circle'></i>
-              <span>RESTful API for third-party integration and automation</span>
-            </div>
-          </div>
-
-          <div class="project-links">
-            <a href="https://s.alibash.com/" target="_blank" class="btn-primary">
-              <i class='bx bx-link-external'></i> Visit Site
-            </a>
-          </div>
-        </div>
-
-        <!-- More Projects Link -->
-        <div class="text-center mt-5" data-aos="fade-up">
-          <a href="#portfolio" class="btn btn-lg btn-outline">
-            View All Projects <i class='bx bx-right-arrow-alt'></i>
-          </a>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Technical Expertise</h2>
-          <p>Production-ready technologies for building scalable, high-performance systems</p>
-        </div>
-
-        <!-- Backend Technologies -->
-        <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
-          <h3><i class='bx bx-server'></i> Backend & APIs</h3>
-          <div class="tech-grid">
-            <div class="tech-badge expert">
-              <i class='bx bxl-laravel'></i>
-              <span>Laravel</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxl-php'></i>
-              <span>PHP 8+</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-nodejs'></i>
-              <span>Node.js</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bx-code-alt'></i>
-              <span>RESTful API</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bx-git-branch'></i>
-              <span>GraphQL</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bx-hive'></i>
-              <span>Microservices</span>
-              <small>Expert</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Databases -->
-        <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
-          <h3><i class='bx bx-data'></i> Databases & Caching</h3>
-          <div class="tech-grid">
-            <div class="tech-badge expert">
-              <i class='bx bxs-data'></i>
-              <span>MySQL</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxs-data'></i>
-              <span>PostgreSQL</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-mongodb'></i>
-              <span>MongoDB</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxl-redis'></i>
-              <span>Redis</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bx-coin-stack'></i>
-              <span>Elasticsearch</span>
-              <small>Advanced</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- DevOps & Cloud -->
-        <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
-          <h3><i class='bx bx-cloud'></i> DevOps & Infrastructure</h3>
-          <div class="tech-grid">
-            <div class="tech-badge expert">
-              <i class='bx bxl-docker'></i>
-              <span>Docker</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-kubernetes'></i>
-              <span>Kubernetes</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxl-aws'></i>
-              <span>AWS</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxl-git'></i>
-              <span>Git</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bx-git-pull-request'></i>
-              <span>CI/CD</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxs-terminal'></i>
-              <span>Linux Admin</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bx-server'></i>
-              <span>Nginx</span>
-              <small>Advanced</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frontend -->
-        <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
-          <h3><i class='bx bx-layout'></i> Frontend & Tools</h3>
-          <div class="tech-grid">
-            <div class="tech-badge advanced">
-              <i class='bx bxl-vuejs'></i>
-              <span>Vue.js</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge intermediate">
-              <i class='bx bxl-react'></i>
-              <span>React</span>
-              <small>Intermediate</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-javascript'></i>
-              <span>TypeScript</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge expert">
-              <i class='bx bxl-html5'></i>
-              <span>HTML5/CSS3</span>
-              <small>Expert</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-sass'></i>
-              <span>Sass</span>
-              <small>Advanced</small>
-            </div>
-            <div class="tech-badge advanced">
-              <i class='bx bxl-bootstrap'></i>
-              <span>Bootstrap</span>
-              <small>Advanced</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Specializations -->
-        <div class="specializations" data-aos="fade-up" data-aos-delay="500">
-          <h3><i class='bx bx-star'></i> Core Specializations</h3>
-          <div class="spec-grid">
-            <div class="spec-item">
-              <i class='bx bx-buildings'></i>
-              <h4>Multi-Tenant Architecture</h4>
-              <p>Designing and implementing scalable SaaS platforms with tenant isolation</p>
-            </div>
-            <div class="spec-item">
-              <i class='bx bx-line-chart'></i>
-              <h4>System Design</h4>
-              <p>Architecting distributed systems with microservices and event-driven patterns</p>
-            </div>
-            <div class="spec-item">
-              <i class='bx bx-network-chart'></i>
-              <h4>API Architecture</h4>
-              <p>Building robust RESTful and GraphQL APIs with comprehensive documentation</p>
-            </div>
-            <div class="spec-item">
-              <i class='bx bx-shield-alt-2'></i>
-              <h4>Security & Performance</h4>
-              <p>Implementing authentication, authorization, and query optimization strategies</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Professional Experience</h2>
-          <p>Building enterprise solutions and leading technical implementations</p>
-        </div>
-
-        <div class="timeline">
-          <!-- Current Role -->
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="timeline-badge current"><i class='bx bx-briefcase'></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date"><i class='bx bx-calendar'></i> April 2024 – Present</span>
-              <h3>Software Engineer | Senior Back-end Developer</h3>
-              <h4>Alsamel Holding Co., Kuwait City <span class="badge-remote">Remote</span></h4>
-              <ul class="responsibilities">
-                <li><i class='bx bx-check'></i> Led the design and implementation of ERP systems covering Real Estate, HMS, Rent-to-Own, HR Management, Booking, Club Membership, Board Rentals, Archiving, and Stock Management</li>
-                <li><i class='bx bx-check'></i> Architected scalable multi-tenant web applications using Laravel, Vue.js, and modern full-stack technologies</li>
-                <li><i class='bx bx-check'></i> Developed responsive, mobile-first UIs with strong focus on performance, accessibility, and UX</li>
-                <li><i class='bx bx-check'></i> Conducted code reviews, mentored junior developers, and established best practices across the team</li>
-                <li><i class='bx bx-check'></i> Optimized database queries reducing response time by 40% using Redis caching and indexing strategies</li>
-              </ul>
-              <div class="tech-tags">
-                <span>Laravel 10</span>
-                <span>Multi-Tenancy</span>
-                <span>Vue.js</span>
-                <span>MySQL</span>
-                <span>Redis</span>
-                <span>Docker</span>
-                <span>AWS</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mid-Level Role -->
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="timeline-badge"><i class='bx bx-briefcase'></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date"><i class='bx bx-calendar'></i> November 2023 – March 2024</span>
-              <h3>Mid-Level Full Stack Developer</h3>
-              <h4>Ibtikarat | ابتكارات, Cairo, Egypt</h4>
-              <ul class="responsibilities">
-                <li><i class='bx bx-check'></i> Built and maintained scalable web applications using Laravel and integrated front-end technologies</li>
-                <li><i class='bx bx-check'></i> Implemented responsive UI components with optimized performance across various devices and browsers</li>
-                <li><i class='bx bx-check'></i> Contributed to code reviews, collaborated with cross-functional teams, and followed industry best practices</li>
-                <li><i class='bx bx-check'></i> Integrated third-party APIs and payment gateways for e-commerce solutions</li>
-              </ul>
-              <div class="tech-tags">
-                <span>Laravel</span>
-                <span>JavaScript</span>
-                <span>MySQL</span>
-                <span>Bootstrap</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- EgyptAir Role -->
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="timeline-badge"><i class='bx bx-briefcase'></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date"><i class='bx bx-calendar'></i> January 2022 – December 2023</span>
-              <h3>Junior Full Stack Developer</h3>
-              <h4>EgyptAir, Cairo, Egypt</h4>
-              <ul class="responsibilities">
-                <li><i class='bx bx-check'></i> Implemented the administrative system for the Air Hospitality Sector, improving workflow efficiency and document management</li>
-                <li><i class='bx bx-check'></i> Developed and integrated modules for employee management, document evaluation, and operational follow-up</li>
-                <li><i class='bx bx-check'></i> Collaborated with internal teams to digitize manual processes, automate reporting, and enhance overall system usability</li>
-                <li><i class='bx bx-check'></i> Ensured system scalability, security, and performance through modern development practices</li>
-              </ul>
-              <div class="tech-tags">
-                <span>Laravel</span>
-                <span>MySQL</span>
-                <span>JavaScript</span>
-                <span>Bootstrap</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Impact Studios -->
-          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="timeline-badge"><i class='bx bx-briefcase'></i></div>
-            <div class="timeline-content">
-              <span class="timeline-date"><i class='bx bx-calendar'></i> March 2021 – December 2021</span>
-              <h3>Junior Full Stack Developer</h3>
-              <h4>Impact Studios, UK <span class="badge-remote">Remote</span></h4>
-              <ul class="responsibilities">
-                <li><i class='bx bx-check'></i> Developed and maintained web applications using Laravel and related technologies</li>
-                <li><i class='bx bx-check'></i> Implemented responsive design and ensured cross-browser compatibility</li>
-                <li><i class='bx bx-check'></i> Participated in code reviews and provided constructive feedback to other developers</li>
-              </ul>
-              <div class="tech-tags">
-                <span>Laravel</span>
-                <span>PHP</span>
-                <span>MySQL</span>
-                <span>Bootstrap</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Education -->
-        <div class="section-title mt-5">
-          <h2>Education & Training</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="education-card">
-              <i class='bx bxs-graduation'></i>
-              <h4>Bachelor of Computer Science and Technology</h4>
-              <p class="institution">Modern Academy for Computer Science and Technology</p>
-              <p class="date">September 2018 – July 2022</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="education-card">
-              <i class='bx bx-code-block'></i>
-              <h4>Full Stack Development & C++ Diploma</h4>
-              <p class="institution">Route Academy</p>
-              <p class="date">November 2020 – October 2021</p>
-              <p class="description">Comprehensive training in OOP, Data Structures, Algorithms, SQL Server, Design Patterns, and SOLID principles</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>About Me</h2>
-          <p>Passionate about building scalable solutions that make a real impact</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/me.jpg" class="img-fluid profile-img" alt="Eslam Abdelbasset">
-            
-            <div class="personal-info mt-4">
-              <h3>Quick Info</h3>
-              <ul class="info-list">
-                <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Cairo, Egypt</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>27 years</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's Degree</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Arabic (Native), English (Professional)</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>eslamabdelbasset1@gmail.com</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+20 106 083 8210</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Status:</strong> <span class="status-badge">Open to Opportunities</span></li>
-              </ul>
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="section-header fade-in-up" style="max-width: 100%; margin-bottom: 0;">
+                    <span class="section-title">About Me</span>
+                    <h2 class="section-subtitle">Architecting the future of <span class="text-secondary">Enterprise Web</span>.</h2>
+                    <p>
+                        I'm a Senior Full Stack Developer with deep expertise in back-end engineering, specializing in building robust, scalable architectures.
+                        With extensive experience in <strong>Laravel</strong> and <strong>Multi-Tenant Architecture</strong>, I've led the development of complex ERP systems serving thousands of users.
+                    </p>
+                    <p>
+                        My focus isn't just on writing code—it's on solving business problems through efficient, maintainable, and high-performance technical solutions.
+                    </p>
+                </div>
+                
+                <div class="about-image fade-in-up">
+                    <img src="assets/img/me-image.png" alt="Eslam Abdelbasset - Senior Software Engineer" width="400" height="400">
+                </div>
             </div>
-          </div>
-
-          <div class="col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
-            <h3>Senior Back-end Developer & Software Engineer</h3>
-            <p class="lead">
-              I'm a Senior Full Stack Developer with deep expertise in back-end engineering, specializing in building 
-              robust, scalable architectures that power modern web applications. My passion lies in designing clean APIs, 
-              implementing complex multi-tenant systems, and creating efficient server-side solutions that deliver 
-              seamless user experiences.
-            </p>
-
-            <div class="about-content">
-              <h4><i class='bx bx-target-lock'></i> What I Do Best</h4>
-              <p>
-                With over 5 years of hands-on experience, I've led the development of enterprise-level ERP systems, 
-                administrative platforms, and SaaS applications. I specialize in Laravel framework, multi-tenant architecture, 
-                and API development, with a proven track record of improving system performance, reducing response times, 
-                and mentoring development teams.
-              </p>
-
-              <h4><i class='bx bx-bulb'></i> My Approach</h4>
-              <p>
-                I believe in writing clean, maintainable code that follows SOLID principles and industry best practices. 
-                Beyond technical capabilities, I value clear communication and teamwork. I thrive in collaborative 
-                environments where innovation is driven by shared vision and mutual respect.
-              </p>
-
-              <h4><i class='bx bx-rocket'></i> Continuous Growth</h4>
-              <p>
-                I'm a lifelong learner who constantly explores new challenges, tools, and opportunities. Whether it's 
-                optimizing database queries, implementing microservices architecture, or mentoring junior developers, 
-                I'm committed to delivering high-quality solutions that drive real business value.
-              </p>
-
-              <div class="achievements mt-4">
-                <div class="achievement-item">
-                  <i class='bx bx-award'></i>
-                  <div>
-                    <h5>Code Quality Champion</h5>
-                    <p>Established code review processes and best practices across multiple teams</p>
-                  </div>
-                </div>
-                <div class="achievement-item">
-                  <i class='bx bx-line-chart'></i>
-                  <div>
-                    <h5>Performance Optimization</h5>
-                    <p>Reduced API response times by 40% through strategic caching and query optimization</p>
-                  </div>
-                </div>
-                <div class="achievement-item">
-                  <i class='bx bx-group'></i>
-                  <div>
-                    <h5>Team Leadership</h5>
-                    <p>Mentored 5+ junior developers in Laravel, system design, and professional growth</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- All Portfolio Section (Condensed) -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>All Projects</h2>
-          <p>A collection of front-end, back-end, and full-stack projects demonstrating versatile development skills</p>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-title">Tech Stack</span>
+                <h2 class="section-subtitle">Battle-tested technologies.</h2>
+            </div>
+
+            <!-- Backend & APIs -->
+            <h4 class="text-primary mb-3 mt-4 fade-in-up">Backend & APIs</h4>
+            <div class="skills-grid fade-in-up">
+                <div class="skill-card">
+                    <i data-lucide="server" class="skill-icon"></i>
+                    <span class="skill-name">Laravel</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="globe" class="skill-icon"></i>
+                    <span class="skill-name">PHP 8+</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="cpu" class="skill-icon"></i>
+                    <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="code" class="skill-icon"></i>
+                    <span class="skill-name">RESTful API</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="share-2" class="skill-icon"></i>
+                    <span class="skill-name">GraphQL</span>
+                </div>
+            </div>
+
+            <!-- Databases & Caching -->
+            <h4 class="text-primary mb-3 mt-5 fade-in-up">Databases & Caching</h4>
+            <div class="skills-grid fade-in-up">
+                <div class="skill-card">
+                    <i data-lucide="database" class="skill-icon"></i>
+                    <span class="skill-name">MySQL</span>
+                </div>    
+                <div class="skill-card">
+                    <i data-lucide="zap" class="skill-icon"></i>
+                    <span class="skill-name">Redis</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="search" class="skill-icon"></i>
+                    <span class="skill-name">Elasticsearch</span>
+                </div>
+            </div>
+
+            <!-- DevOps & Infrastructure -->
+            <h4 class="text-primary mb-3 mt-5 fade-in-up">DevOps & Infrastructure</h4>
+            <div class="skills-grid fade-in-up">
+                <div class="skill-card">
+                    <i data-lucide="container" class="skill-icon"></i>
+                    <span class="skill-name">Docker</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="git-branch" class="skill-icon"></i>
+                    <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="repeat" class="skill-icon"></i>
+                    <span class="skill-name">CI/CD</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="terminal" class="skill-icon"></i>
+                    <span class="skill-name">Linux Admin</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="settings" class="skill-icon"></i>
+                    <span class="skill-name">Nginx</span>
+                </div>
+            </div>
+
+            <!-- Frontend & Tools -->
+            <h4 class="text-primary mb-3 mt-5 fade-in-up">Frontend & Tools</h4>
+            <div class="skills-grid fade-in-up">
+                <div class="skill-card">
+                    <i data-lucide="layout" class="skill-icon"></i>
+                    <span class="skill-name">Vue.js</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="file-code" class="skill-icon"></i>
+                    <span class="skill-name">TypeScript</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="layout-template" class="skill-icon"></i>
+                    <span class="skill-name">HTML5/CSS3</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="palette" class="skill-icon"></i>
+                    <span class="skill-name">Sass</span>
+                </div>
+                <div class="skill-card">
+                    <i data-lucide="columns" class="skill-icon"></i>
+                    <span class="skill-name">Bootstrap</span>
+                </div>
+            </div>
+
+             <!-- Core Specializations -->
+             <h4 class="text-primary mb-3 mt-5 fade-in-up">Core Specializations</h4>
+             <div class="skills-grid fade-in-up">
+                 <div class="skill-card">
+                     <i data-lucide="network" class="skill-icon"></i>
+                     <span class="skill-name">Multi-Tenant Arch</span>
+                 </div>
+                 <div class="skill-card">
+                     <i data-lucide="box" class="skill-icon"></i>
+                     <span class="skill-name">System Design</span>
+                 </div>
+                 <div class="skill-card">
+                     <i data-lucide="shield" class="skill-icon"></i>
+                     <span class="skill-name">Security</span>
+                 </div>
+             </div>
         </div>
+    </section>
 
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-laravel">Back-end</li>
-              <li data-filter=".filter-api">API</li>
-              <li data-filter=".filter-front">Front-end</li>
-              <a class="repositories" href="https://github.com/eslamabdelbasset1?tab=repositories" target="_blank">
-                <i class='bx bxl-github'></i> GitHub Repos
-              </a>
-            </ul>
-          </div>
+    <!-- Education Section -->
+    <section id="education" style="background-color: var(--bg-card);">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-title">Education</span>
+                <h2 class="section-subtitle">Academic Background.</h2>
+            </div>
+            
+            <div class="projects-grid fade-in-up">
+                <div class="project-card" style="border-color: var(--border);">
+                    <div class="project-content">
+                        <i data-lucide="graduation-cap" class="skill-icon mb-3"></i>
+                        <span class="project-category">2018 - 2022</span>
+                        <h3 class="project-title" style="font-size: 1.25rem;">Bachelor of Computer Science</h3>
+                        <p class="project-desc">Modern Academy for Computer Science and Technology.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" style="border-color: var(--border);">
+                    <div class="project-content">
+                        <i data-lucide="award" class="skill-icon mb-3"></i>
+                        <span class="project-category">2020 - 2021</span>
+                        <h3 class="project-title" style="font-size: 1.25rem;">Full Stack Development Diploma</h3>
+                        <p class="project-desc">Route Academy. Intensive training in OOP, Data Structures, and Algorithms.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          <!-- Backend Projects -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/impact.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Impact Studios CMS</h4>
-                <p>Laravel, MySQL</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/impact.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://impactstudio.uk" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-title">Featured Work</span>
+                <h2 class="section-subtitle">Scalable systems impacting <span class="text-accent">real businesses</span>.</h2>
             </div>
-          </div>
+            
+            <!-- Highlighted Best Project -->
+            <div class="projects-grid" style="grid-template-columns: 1fr; margin-bottom: 2rem;">
+                 <div class="project-card fade-in-up" style="border-color: var(--primary); background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);">
+                    <div class="project-content" style="flex-direction: row; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                        <div style="flex: 2; min-width: 300px;">
+                            <span class="project-category" style="color: var(--primary);">Start Here - Enterprise ERP</span>
+                            <h3 class="project-title" style="font-size: 2rem; margin-top: 0.5rem;">Alsamel Multi-Tenant ERP</h3>
+                            <p class="project-desc" style="font-size: 1.1rem; max-width: none;">
+                                Architected a comprehensive platform serving 8+ business domains (Real Estate, HR, HMS).
+                                Handled 500+ concurrent users with tenant isolation and 60% workflow efficiency improvement.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Laravel 10</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Multi-Tenancy</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#contact" class="btn btn-primary"><i data-lucide="lock"></i> Proprietary System</a>
+                            </div>
+                        </div>
+                         <!-- Placeholder for a project screenshot if available in future -->
+                         <div style="flex: 1; min-width: 200px; opacity: 0.8; text-align: center;">
+                            <i data-lucide="layout-dashboard" style="width: 120px; height: 120px; color: var(--border);"></i>
+                         </div>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/back1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>EgyShop E-commerce</h4>
-                <p>Laravel, MySQL</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/back1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://github.com/eslamabdelbasset1/EgyShop" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="projects-grid">
+                <!-- Combined SaaS Projects Card -->
+                <div class="project-card fade-in-up">
+                    <div class="project-content">
+                        <span class="project-category">SaaS Applications</span>
+                        <h3 class="project-title">Deployed products</h3>
+                        
+                        <div style="margin-top: 1rem; border-left: 2px solid var(--border); padding-left: 1rem; margin-bottom: 2rem;">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Tog.sa Cloud Accounting</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">ZATCA-compliant e-invoicing & inventory.</p>
+                             <a href="https://tog.sa/" target="_blank" class="icon-link" style="font-size: 0.9rem;"><i data-lucide="external-link" size="14"></i> Visit Tog.sa</a>
+                        </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/todo.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Todo List Application</h4>
-                <p>Laravel, MySQL</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/todo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://github.com/eslamabdelbasset1/todo-list" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+                        <div style="border-left: 2px solid var(--border); padding-left: 1rem;">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">AliBash URL Shortener</h4>
+                             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">High-performance link analytics & QR.</p>
+                             <a href="https://s.alibash.com/" target="_blank" class="icon-link" style="font-size: 0.9rem;"><i data-lucide="external-link" size="14"></i> Visit AliBash</a>
+                        </div>
 
-          <!-- API Projects -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-api">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/project7.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Movies App with API</h4>
-                <p>Angular, TypeScript, API</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/project7.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/movies-app-angular" target="_blank"><i class="bx bx-link"></i></a>
+                         <div class="project-tech" style="margin-top: 1.5rem;">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-api">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/project8.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Quran Application</h4>
-                <p>Angular, TypeScript, API</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/project8.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/quranApp-master" target="_blank"><i class="bx bx-link"></i></a>
+                 <!-- Project 3 -->
+                 <div class="project-card fade-in-up">
+                    <div class="project-content">
+                        <span class="project-category">Corporate System</span>
+                        <h3 class="project-title">EgyptAir Admin System</h3>
+                        <p class="project-desc">
+                            Digitized manual processes for the Air Hospitality Sector, reducing document processing time by 45% for 200+ staff.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="icon-link" title="Internal System"><i data-lucide="lock"></i> Internal</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-api">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Weather App</h4>
-                <p>JavaScript, Weather API</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/Weather-api" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Frontend Projects -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-front">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/project1.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>DevFolio Website</h4>
-                <p>HTML, CSS, Bootstrap</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/project1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/Devfolio" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-front">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/project2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Angora Website</h4>
-                <p>HTML, CSS, JavaScript</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/project2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/Angora" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-front">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/project5.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>CRUD System</h4>
-                <p>JavaScript, jQuery, Bootstrap</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/project5.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                  <a href="https://eslamabdelbasset1.github.io/CRUD-System" target="_blank"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-title">Career Path</span>
+                <h2 class="section-subtitle">Professional Journey.</h2>
+            </div>
+
+            <div class="timeline fade-in-up">
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2025 – Present</div>
+                    <h3 class="timeline-title">Software Engineer</h3>
+                    <div class="timeline-company">Loc Camp, Al Jizah, Egypt</div>
+                    <p>Focusing on high-performance backend solutions, code quality assurance, and driving technical innovation.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 2024 – Sep 2025</div>
+                    <h3 class="timeline-title">Senior Back-end Developer</h3>
+                    <div class="timeline-company">Alsamel Holding Co., Kuwait (Remote)</div>
+                    <p>Led architecture for 8+ ERP domains. Optimized query performance by 40% and mentored junior developers.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2023 – Mar 2024</div>
+                    <h3 class="timeline-title">Mid-Level Full Stack Developer</h3>
+                    <div class="timeline-company">Ibtikarat, Cairo</div>
+                    <p>Built scalable web apps and integrated payment gateways for e-commerce solutions.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2022 – Dec 2023</div>
+                    <h3 class="timeline-title">Junior Full Stack Developer</h3>
+                    <div class="timeline-company">EgyptAir, Cairo</div>
+                    <p>Developed administrative systems automating employee evaluation and document management.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2021 – Jan 2022</div>
+                    <h3 class="timeline-title">Junior Full Stack Developer</h3>
+                    <div class="timeline-company">Impact Studios, UK (Remote)</div>
+                    <p>Collaborated with a global team to build and maintain responsive web applications.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Get In Touch</h2>
-          <p>Have a project in mind or want to discuss opportunities? Let's connect!</p>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="info-item">
-                <i class="bi bi-geo-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>Gesr Al Suez, Cairo, Egypt</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <i class="bi bi-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p><a href="mailto:eslamabdelbasset1@gmail.com">eslamabdelbasset1@gmail.com</a></p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <i class="bi bi-phone"></i>
-                <div>
-                  <h4>Call / WhatsApp</h4>
-                  <p><a href="tel:+201060838210">+20 106 083 8210</a></p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <i class="bi bi-linkedin"></i>
-                <div>
-                  <h4>LinkedIn</h4>
-                  <p><a href="https://www.linkedin.com/in/eslamabdelbasset/" target="_blank">linkedin.com/in/eslamabdelbasset</a></p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <i class="bi bi-github"></i>
-                <div>
-                  <h4>GitHub</h4>
-                  <p><a href="https://github.com/eslamabdelbasset1" target="_blank">github.com/eslamabdelbasset1</a></p>
-                </div>
-              </div>
+    <section id="contact" style="padding-bottom: 8rem;">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <span class="section-title">Contact</span>
+                <h2 class="section-subtitle">Let's build something <span class="text-primary">great</span>.</h2>
             </div>
-          </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="https://formspree.io/f/xpznwpjz" method="POST" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <div class="contact-container fade-in-up">
+                <div class="contact-info">
+                    <a target="_blank" href="mailto:eslamabdelbasset1@gmail.com" class="item">
+                        <i data-lucide="mail" class="skill-icon"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>eslamabdelbasset1@gmail.com</p>
+                        </div>
+                    </a>
+                    
+                    <a target="_blank" href="https://www.linkedin.com/in/eslamabdelbasset/" class="item">
+                        <i data-lucide="linkedin" class="skill-icon"></i>
+                        <div>
+                            <h5>LinkedIn</h5>
+                            <p>in/eslamabdelbasset</p>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="https://github.com/eslamabdelbasset1" class="item">
+                        <i data-lucide="github" class="skill-icon"></i>
+                        <div>
+                            <h5>GitHub</h5>
+                            <p>@eslamabdelbasset1</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+
+                <div class="contact-form-wrapper">
+                     <!-- Simple direct contact call to action instead of form for clean portfolio -->
+                     <div class="project-card" style="padding: 2rem; border-color: var(--primary);">
+                        <h3 style="margin-bottom: 1rem;">Open to Opportunities</h3>
+                        <p>
+                            I'm currently available for freelance projects and full-time roles. 
+                            If you're looking for a Senior Developer to help scale your product, let's talk.
+                        </p>
+                        <a target="_blank" href="mailto:eslamabdelbasset1@gmail.com" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                            Send an Email
+                        </a>
+                        <a target="_blank" href="https://wa.me/201060838210" class="btn btn-outline" style="width: 100%; margin-top: 1rem; border-color: #22C55E; color: #22C55E;">
+                            <i data-lucide="message-circle"></i> WhatsApp
+                        </a>
+                     </div>
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit"><i class='bx bx-send'></i> Send Message</button>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; <strong><span>2025 Eslam Abdelbasset</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Built with <i class='bx bx-heart' style="color: #e74c3c;"></i> and Laravel expertise
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer style="padding: 2rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2026 Eslam Abdelbasset. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
