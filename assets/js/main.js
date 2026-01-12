@@ -8,6 +8,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ----------------------------------------------------------------------
+    // Set Dynamic Copyright Year
+    // ----------------------------------------------------------------------
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+    
+    // ----------------------------------------------------------------------
     // Mobile Menu Toggle
     // ----------------------------------------------------------------------
     const mobileToggle = document.getElementById('mobile-toggle');
