@@ -436,9 +436,20 @@ section {
 /* Buttons row */
 .hero-btns {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
+}
+
+.hero-btns-sub {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hero-btns .btn {
+  width: auto;
 }
 
 /* Social links */
@@ -1399,37 +1410,50 @@ section {
 @media (max-width: 768px) {
   section { padding: 4rem 0; }
 
-  /* Mobile nav */
+  /* Mobile nav — Premium Full-Screen Overlay */
   .nav-menu {
     position: fixed;
-    top: var(--header-height);
-    left: 0;
+    inset: 0;
     width: 100%;
-    background: rgba(8, 8, 8, 0.98); /* Match deep black theme */
-    backdrop-filter: blur(16px);
+    height: 100vh;
+    background: #080808;
     flex-direction: column;
-    padding: 1.5rem;
-    gap: 0.25rem;
-    border-bottom: 1px solid var(--border);
-    transform: translateY(-110%);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateY(-100%);
     opacity: 0;
-    transition: var(--transition);
-    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 999;
+    pointer-events: none;
   }
 
   .nav-menu.active {
     transform: translateY(0);
     opacity: 1;
-    z-index: 999;
+    pointer-events: auto;
   }
 
   .nav-link {
-    padding: 0.75rem 1rem;
-    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    padding: 1rem;
+    text-align: center;
+    width: auto;
+  }
+
+  .nav-menu .btn {
+    margin-top: 1.5rem;
+    width: 80%;
+    max-width: 300px;
+    padding: 1rem;
   }
 
   .mobile-toggle {
     display: flex;
+    z-index: 1001; /* Stay above overlay */
   }
 
   /* Hero */
@@ -1443,6 +1467,18 @@ section {
 
   .hero-btns {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btns-sub {
+    flex-direction: row; /* Keep sub-buttons side-by-side on mobile */
+    width: 100%;
+  }
+
+  .hero-btns-sub .btn {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
   }
 
   .hero-btns .btn {
