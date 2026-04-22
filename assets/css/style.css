@@ -644,14 +644,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  background: var(--bg-card);
+  background: #111111;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem 1rem;
-  width: 100px;
+  padding: 1.25rem 0.5rem;
+  width: 105px;
   transition: var(--transition);
-  cursor: default;
+  text-align: center;
 }
 
 .skill-card:hover {
@@ -1449,9 +1450,25 @@ section {
   }
 
   /* Skills */
+  /* Skills — Optimized grid for mobile */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
   .skill-card {
-    width: 88px;
-    padding: 1rem 0.75rem;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .skill-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-card span {
+    font-size: 0.7rem;
   }
 
   /* Experience — Stacked for mobile to prevent title squeeze */
@@ -1510,6 +1527,12 @@ section {
 
   .core-tags {
     gap: 0.5rem;
+  }
+
+  .core-tag {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 8px; /* Slightly squarer for the new theme */
   }
 }
 
