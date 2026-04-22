@@ -120,4 +120,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ------------------------------------------------------------------
+    // Hero Image Interactive Tilt
+    // ------------------------------------------------------------------
+    const heroWrap = document.querySelector('.hero-image-wrap');
+    const heroFrame = document.querySelector('.hero-image-frame');
+    const heroPhoto = document.querySelector('.hero-photo');
+    const heroBadges = document.querySelectorAll('.hero-image-badge');
+
+    if (heroWrap && heroFrame) {
+        heroWrap.addEventListener('mousemove', (e) => {
+            const rect = heroWrap.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            // Tilt the main frame
+            heroFrame.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            // Subtle parallax for the photo inside
+            if (heroPhoto) {
+                heroPhoto.style.transform = `scale(1.1) translate(${(x - centerX) / 20}px, ${(y - centerY) / 20}px)`;
+            }
+
+            // More aggressive parallax for badges
+            heroBadges.forEach(badge => {
+                const depth = badge.classList.contains('hero-image-badge--left') ? 40 : 60;
+                badge.style.transform = `translateZ(${depth}px) translate(${(x - centerX) / 15}px, ${(y - centerY) / 15}px)`;
+            });
+        });
+
+        heroWrap.addEventListener('mouseleave', () => {
+            heroFrame.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+            if (heroPhoto) heroPhoto.style.transform = `scale(1) translate(0, 0)`;
+            
+            heroBadges.forEach(badge => {
+                badge.style.transform = `translateZ(0px) translate(0, 0)`;
+            });
+        });
+    }
+
 });
