@@ -5,444 +5,724 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eslam Abdelbasset | Senior Back-end Engineer</title>
     <meta name="description" content="Senior Back-end Developer specializing in Laravel, Multi-Tenant SaaS Architecture, and ERP Systems. Building scalable enterprise solutions.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="alternate icon" href="assets/img/favicon.ico">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">&lt;Eslam<span>.Dev</span> /&gt;</a>
-            
-            <div class="mobile-toggle" id="mobile-toggle">
+            <a href="#hero" class="logo">&lt;Eslam <span>Abdelbasset</span> /&gt;</a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
                 <i data-lucide="menu"></i>
-            </div>
+            </button>
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#works" class="nav-link">Work</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="assets/cv/islamAbdelbasset-Resume.pdf" class="btn btn-primary" download target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Resume</a></li>
+                <li>
+                    <a href="assets/cv/islamAbdelbasset-Resume.pdf" class="btn btn-primary btn-sm" download target="_blank">
+                        <i data-lucide="download" size="16"></i> Resume
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
+        <div class="hero-bg-glow"></div>
         <div class="container">
-            <div class="hero-content">
-                <span class="role">Software Engineer | Senior Back-end Developer</span>
-                <h1>Building Scalable <span class="text-primary">Multi-Tenant SaaS</span> & Enterprise Solutions.</h1>
-                <p class="lead">over 5 years of experience architecting distributed systems, optimizing high-performance APIs, and leading development teams in the ERP space.</p>
-                
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">
-                        View Projects <i data-lucide="arrow-right" size="18"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
-                    </a>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for new opportunities
+                    </div>
+
+                    <h1>Eslam<br><span class="text-primary">Abdelbasset.</span></h1>
+                    <p class="hero-role">Senior Back-end Engineer</p>
+                    <p class="hero-desc">
+                        5+ years architecting distributed systems, high-performance APIs, and multi-tenant ERP platforms.
+                        Expert in Laravel ecosystems, cloud infrastructure, and building products that scale to thousands of concurrent users.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5<span class="text-primary">+</span></span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">20<span class="text-primary">+</span></span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">6<span class="text-primary">+</span></span>
+                            <span class="stat-label">Companies</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-btns">
+                        <a href="#works" class="btn btn-primary">
+                            <i data-lucide="briefcase" size="18"></i> Featured Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i data-lucide="send" size="18"></i> Get in Touch
+                        </a>
+                    </div>
+
+                    <div class="hero-links">
+                        <a href="mailto:eslamabdelbasset1@gmail.com" class="hero-link" title="Email">
+                            <i data-lucide="mail" size="16"></i> Email
+                        </a>
+                        <a href="tel:+201060838210" class="hero-link contact-chip" title="Phone">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+                            </svg>
+                            +20 106 083 8210
+                        </a>
+                        <a href="https://www.linkedin.com/in/eslamabdelbasset/" target="_blank" class="hero-link" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
+                        </a>
+                        <a href="https://wa.me/201060838210" target="_blank" class="hero-link" title="WhatsApp">
+                            <i data-lucide="message-circle" size="16"></i> WhatsApp
+                        </a>
+                        <a href="https://github.com/eslamabdelbasset1" target="_blank" class="hero-link" title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrap">
+                    <div class="hero-image-frame">
+                        <img src="assets/img/me-image.png" alt="Eslam Abdelbasset - Senior Back-end Engineer" class="hero-photo">
+                        <div class="hero-image-badge hero-image-badge--left">
+                            <i data-lucide="layers" size="14"></i>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="hero-image-badge hero-image-badge--right">
+                            <i data-lucide="cloud" size="14"></i>
+                            <span>DevOps</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section-alt">
         <div class="container">
-            <div class="about-grid">
-                <div class="section-header fade-in-up" style="max-width: 100%; margin-bottom: 0;">
-                    <span class="section-title">About Me</span>
-                    <h2 class="section-subtitle">Architecting the future of <span class="text-secondary">Enterprise Web</span>.</h2>
-                    <p>
-                        I'm a Senior Full Stack Developer with deep expertise in back-end engineering, specializing in building robust, scalable architectures.
-                        With extensive experience in <strong>Laravel</strong> and <strong>Multi-Tenant Architecture</strong>, I've led the development of complex ERP systems serving thousands of users.
-                    </p>
-                    <p>
-                        My focus isn't just on writing code—it's on solving business problems through efficient, maintainable, and high-performance technical solutions.
-                    </p>
+            <div class="section-header fade-in-up">
+                <span class="section-eyebrow">About Me</span>
+                <h2 class="section-title">Architecting the future of <span class="text-secondary">Enterprise Web</span>.</h2>
+            </div>
+            <div class="about-grid fade-in-up">
+                <p class="about-para">
+                    I'm a Senior Full Stack Developer with deep expertise in back-end engineering, specializing in building robust, scalable architectures.
+                    With extensive experience in <strong>Laravel</strong> and <strong>Multi-Tenant Architecture</strong>, I've led the development of complex ERP systems serving thousands of concurrent users.
+                </p>
+                <p class="about-para">
+                    My focus isn't just on writing code — it's on solving business problems through efficient, maintainable, and high-performance technical solutions. I believe great software is about impact, not just implementation.
+                </p>
+            </div>
+
+            <!-- Education inline -->
+            <div class="edu-grid fade-in-up">
+                <div class="edu-card">
+                    <i data-lucide="graduation-cap" class="edu-icon"></i>
+                    <div>
+                        <span class="edu-year">2018 – 2022</span>
+                        <h4 class="edu-title">Bachelor of Computer Science</h4>
+                        <p class="edu-school">Modern Academy for Computer Science & Technology</p>
+                    </div>
                 </div>
-                
-                <div class="about-image fade-in-up">
-                    <img src="assets/img/me-image.png" alt="Eslam Abdelbasset - Senior Software Engineer" width="400" height="400">
+                <div class="edu-card">
+                    <i data-lucide="award" class="edu-icon"></i>
+                    <div>
+                        <span class="edu-year">2020 – 2021</span>
+                        <h4 class="edu-title">Full Stack Development Diploma</h4>
+                        <p class="edu-school">Route Academy · OOP, Data Structures & Algorithms</p>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <i data-lucide="code-2" class="edu-icon"></i>
+                    <div>
+                        <span class="edu-year">2017 – 2018</span>
+                        <h4 class="edu-title">C++ Programming Diploma</h4>
+                        <p class="edu-school">Modern Academy for Computer Science & Technology</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===== SKILLS ===== -->
     <section id="skills">
         <div class="container">
             <div class="section-header fade-in-up">
-                <span class="section-title">Tech Stack</span>
-                <h2 class="section-subtitle">Battle-tested technologies.</h2>
+                <span class="section-eyebrow">Tech Stack</span>
+                <h2 class="section-title">Battle-tested <span class="text-primary">Technologies</span>.</h2>
             </div>
 
             <!-- Backend & APIs -->
-            <h4 class="text-primary mb-3 mt-4 fade-in-up">Backend & APIs</h4>
-            <div class="skills-grid fade-in-up">
-                <div class="skill-card">
-                    <i data-lucide="server" class="skill-icon"></i>
-                    <span class="skill-name">Laravel</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="globe" class="skill-icon"></i>
-                    <span class="skill-name">PHP 8+</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="cpu" class="skill-icon"></i>
-                    <span class="skill-name">Node.js</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="code" class="skill-icon"></i>
-                    <span class="skill-name">RESTful API</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="share-2" class="skill-icon"></i>
-                    <span class="skill-name">GraphQL</span>
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="server" size="16"></i> Backend &amp; APIs</h4>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="skill-img"><span>Laravel</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-img"><span>PHP 8+</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-img"><span>Node.js</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" class="skill-img"><span>GraphQL</span></div>
+                    <div class="skill-card"><i data-lucide="zap" class="skill-lucide"></i><span>REST API</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-img"><span>Python</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg" alt="Composer" class="skill-img"><span>Composer</span></div>
+                    <div class="skill-card"><i data-lucide="shield" class="skill-lucide"></i><span>Sanctum / JWT</span></div>
+                    <div class="skill-card"><i data-lucide="layers" class="skill-lucide"></i><span>Livewire</span></div>
+                    <div class="skill-card"><i data-lucide="mail" class="skill-lucide"></i><span>Queues &amp; Jobs</span></div>
+                    <div class="skill-card"><i data-lucide="activity" class="skill-lucide"></i><span>WebSockets</span></div>
                 </div>
             </div>
 
             <!-- Databases & Caching -->
-            <h4 class="text-primary mb-3 mt-5 fade-in-up">Databases & Caching</h4>
-            <div class="skills-grid fade-in-up">
-                <div class="skill-card">
-                    <i data-lucide="database" class="skill-icon"></i>
-                    <span class="skill-name">MySQL</span>
-                </div>    
-                <div class="skill-card">
-                    <i data-lucide="zap" class="skill-icon"></i>
-                    <span class="skill-name">Redis</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="search" class="skill-icon"></i>
-                    <span class="skill-name">Elasticsearch</span>
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="database" size="16"></i> Databases &amp; Caching</h4>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-img"><span>MySQL</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-img"><span>PostgreSQL</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="skill-img"><span>Redis</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-img"><span>MongoDB</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" class="skill-img"><span>SQLite</span></div>
+                    <div class="skill-card"><i data-lucide="database" class="skill-lucide"></i><span>Eloquent ORM</span></div>
+                    <div class="skill-card"><i data-lucide="git-branch" class="skill-lucide"></i><span>Migrations</span></div>
                 </div>
             </div>
 
             <!-- DevOps & Infrastructure -->
-            <h4 class="text-primary mb-3 mt-5 fade-in-up">DevOps & Infrastructure</h4>
-            <div class="skills-grid fade-in-up">
-                <div class="skill-card">
-                    <i data-lucide="container" class="skill-icon"></i>
-                    <span class="skill-name">Docker</span>
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="cloud" size="16"></i> DevOps &amp; Infrastructure</h4>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-img"><span>Docker</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-img"><span>Git</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" class="skill-img"><span>GitLab CI</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-img"><span>Linux Admin</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" class="skill-img"><span>Nginx</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" class="skill-img"><span>AWS</span></div>
+                    <div class="skill-card"><i data-lucide="refresh-cw" class="skill-lucide"></i><span>CI/CD</span></div>
+                    <div class="skill-card"><i data-lucide="terminal" class="skill-lucide"></i><span>Bash / Shell</span></div>
+                    <div class="skill-card"><i data-lucide="server" class="skill-lucide"></i><span>Apache</span></div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="git-branch" class="skill-icon"></i>
-                    <span class="skill-name">Git</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="repeat" class="skill-icon"></i>
-                    <span class="skill-name">CI/CD</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="terminal" class="skill-icon"></i>
-                    <span class="skill-name">Linux Admin</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="settings" class="skill-icon"></i>
-                    <span class="skill-name">Nginx</span>
+            </div>
+
+            <!-- Messaging & Queues -->
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="radio" size="16"></i> Messaging &amp; Queues</h4>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="RabbitMQ" class="skill-img"><span>RabbitMQ</span></div>
+                    <div class="skill-card"><i data-lucide="bell" class="skill-lucide"></i><span>Laravel Echo</span></div>
+                    <div class="skill-card"><i data-lucide="send" class="skill-lucide"></i><span>Pusher</span></div>
+                    <div class="skill-card"><i data-lucide="smartphone" class="skill-lucide"></i><span>Firebase FCM</span></div>
                 </div>
             </div>
 
             <!-- Frontend & Tools -->
-            <h4 class="text-primary mb-3 mt-5 fade-in-up">Frontend & Tools</h4>
-            <div class="skills-grid fade-in-up">
-                <div class="skill-card">
-                    <i data-lucide="layout" class="skill-icon"></i>
-                    <span class="skill-name">Vue.js</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="file-code" class="skill-icon"></i>
-                    <span class="skill-name">TypeScript</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="layout-template" class="skill-icon"></i>
-                    <span class="skill-name">HTML5/CSS3</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="palette" class="skill-icon"></i>
-                    <span class="skill-name">Sass</span>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="columns" class="skill-icon"></i>
-                    <span class="skill-name">Bootstrap</span>
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="monitor" size="16"></i> Frontend &amp; Tools</h4>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="skill-img"><span>Vue.js</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" alt="Nuxt.js" class="skill-img"><span>Nuxt.js</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-img"><span>React</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-img"><span>TypeScript</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-img"><span>JavaScript</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-img"><span>HTML5</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-img"><span>CSS3</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" class="skill-img"><span>Sass</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="skill-img"><span>Tailwind</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-img"><span>Bootstrap</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-img"><span>Figma</span></div>
+                    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="skill-img"><span>Postman</span></div>
                 </div>
             </div>
 
-             <!-- Core Specializations -->
-             <h4 class="text-primary mb-3 mt-5 fade-in-up">Core Specializations</h4>
-             <div class="skills-grid fade-in-up">
-                 <div class="skill-card">
-                     <i data-lucide="network" class="skill-icon"></i>
-                     <span class="skill-name">Multi-Tenant Arch</span>
-                 </div>
-                 <div class="skill-card">
-                     <i data-lucide="box" class="skill-icon"></i>
-                     <span class="skill-name">System Design</span>
-                 </div>
-                 <div class="skill-card">
-                     <i data-lucide="shield" class="skill-icon"></i>
-                     <span class="skill-name">Security</span>
-                 </div>
-             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" style="background-color: var(--bg-card);">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <span class="section-title">Education</span>
-                <h2 class="section-subtitle">Academic Background.</h2>
-            </div>
-            
-            <div class="projects-grid fade-in-up">
-                <div class="project-card" style="border-color: var(--border);">
-                    <div class="project-content">
-                        <i data-lucide="graduation-cap" class="skill-icon mb-3"></i>
-                        <span class="project-category">2018 - 2022</span>
-                        <h3 class="project-title" style="font-size: 1.25rem;">Bachelor of Computer Science</h3>
-                        <p class="project-desc">Modern Academy for Computer Science and Technology.</p>
-                    </div>
-                </div>
-
-                <div class="project-card" style="border-color: var(--border);">
-                    <div class="project-content">
-                        <i data-lucide="award" class="skill-icon mb-3"></i>
-                        <span class="project-category">2020 - 2021</span>
-                        <h3 class="project-title" style="font-size: 1.25rem;">Full Stack Development Diploma</h3>
-                        <p class="project-desc">Route Academy. Intensive training in OOP, Data Structures, and Algorithms.</p>
-                    </div>
-                </div>
-
-                <div class="project-card" style="border-color: var(--border);">
-                    <div class="project-content">
-                        <i data-lucide="code-2" class="skill-icon mb-3"></i>
-                        <span class="project-category">2017 - 2018</span>
-                        <h3 class="project-title" style="font-size: 1.25rem;">C++ Programming Diploma</h3>
-                        <p class="project-desc">Modern Academy for Computer Science and Technology.</p>
-                    </div>
+            <!-- Core Specializations -->
+            <div class="skill-group fade-in-up">
+                <h4 class="skill-group-label"><i data-lucide="layers" size="16"></i> Core Specializations</h4>
+                <div class="core-tags">
+                    <span class="core-tag"><i data-lucide="network" size="14"></i> Multi-Tenant Architecture</span>
+                    <span class="core-tag"><i data-lucide="box" size="14"></i> System Design</span>
+                    <span class="core-tag"><i data-lucide="shield" size="14"></i> API Security</span>
+                    <span class="core-tag"><i data-lucide="trending-up" size="14"></i> Performance Optimization</span>
+                    <span class="core-tag"><i data-lucide="receipt" size="14"></i> ERP Systems</span>
+                    <span class="core-tag"><i data-lucide="credit-card" size="14"></i> Payment Gateways</span>
+                    <span class="core-tag"><i data-lucide="refresh-cw" size="14"></i> CI/CD Pipelines</span>
+                    <span class="core-tag"><i data-lucide="lock" size="14"></i> Auth &amp; OAuth2</span>
+                    <span class="core-tag"><i data-lucide="activity" size="14"></i> Real-Time Apps</span>
+                    <span class="core-tag"><i data-lucide="server" size="14"></i> SaaS Platforms</span>
+                    <span class="core-tag"><i data-lucide="package" size="14"></i> Domain-Driven Design</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- ===== FEATURED WORK ===== -->
+    <section id="works" class="section-alt">
         <div class="container">
             <div class="section-header fade-in-up">
-                <span class="section-title">Featured Work</span>
-                <h2 class="section-subtitle">Scalable systems impacting <span class="text-accent">real businesses</span>.</h2>
-            </div>
-            
-            <!-- Highlighted Best Project -->
-            <div class="projects-grid" style="grid-template-columns: 1fr; margin-bottom: 2rem;">
-                 <div class="project-card fade-in-up" style="border-color: var(--primary); background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);">
-                    <div class="project-content" style="flex-direction: row; flex-wrap: wrap; gap: 2rem; align-items: center;">
-                        <div style="flex: 2; min-width: 300px;">
-                            <span class="project-category" style="color: var(--primary);">Start Here - Enterprise ERP</span>
-                            <h3 class="project-title" style="font-size: 2rem; margin-top: 0.5rem;">Alsamel Multi-Tenant ERP</h3>
-                            <p class="project-desc" style="font-size: 1.1rem; max-width: none;">
-                                Architected a comprehensive platform serving 8+ business domains (Real Estate, HR, HMS).
-                                Handled 500+ concurrent users with tenant isolation and 60% workflow efficiency improvement.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Laravel 10</span>
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">Redis</span>
-                                <span class="tech-tag">Multi-Tenancy</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#contact" class="btn btn-primary"><i data-lucide="lock"></i> Proprietary System</a>
-                            </div>
-                        </div>
-                         <!-- Placeholder for a project screenshot if available in future -->
-                         <div style="flex: 1; min-width: 200px; opacity: 0.8; text-align: center;">
-                            <i data-lucide="layout-dashboard" style="width: 120px; height: 120px; color: var(--border);"></i>
-                         </div>
-                    </div>
-                </div>
+                <span class="section-eyebrow">Featured Work</span>
+                <h2 class="section-title">Scalable systems impacting <span class="text-accent">real businesses</span>.</h2>
             </div>
 
-            <div class="projects-grid">
-                <!-- Combined SaaS Projects Card -->
-                <div class="project-card fade-in-up">
-                    <div class="project-content">
-                        <span class="project-category">SaaS Applications</span>
-                        <h3 class="project-title">Deployed products</h3>
-                        
-                        <div style="margin-top: 1rem; border-left: 2px solid var(--border); padding-left: 1rem; margin-bottom: 2rem;">
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Tog.sa Cloud Accounting</h4>
-                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">ZATCA-compliant e-invoicing & inventory.</p>
-                             <a href="https://tog.sa/" target="_blank" class="icon-link" style="font-size: 0.9rem;"><i data-lucide="external-link" size="14"></i> Visit Tog.sa</a>
-                        </div>
+            <div class="works-grid">
 
-                        <div style="border-left: 2px solid var(--border); padding-left: 1rem;">
-                            <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">AliBash URL Shortener</h4>
-                             <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">High-performance link analytics & QR.</p>
-                             <a href="https://s.alibash.com/" target="_blank" class="icon-link" style="font-size: 0.9rem;"><i data-lucide="external-link" size="14"></i> Visit AliBash</a>
+                <!-- Layout International -->
+                <div class="work-card work-card--featured fade-in-up">
+                    <div class="work-card-header">
+                        <div class="work-logo-wrap">
+                            <img src="assets/img/works/layout-International.svg" alt="Layout International" class="work-logo">
                         </div>
-
-                         <div class="project-tech" style="margin-top: 1.5rem;">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Analytics</span>
-                        </div>
+                        <a href="https://www.layoutintl.com" target="_blank" class="work-link-btn">
+                            <i data-lucide="external-link" size="16"></i>
+                        </a>
                     </div>
-                </div>
-
-                 <!-- Project 3 -->
-                 <div class="project-card fade-in-up">
-                    <div class="project-content">
-                        <span class="project-category">Corporate System</span>
-                        <h3 class="project-title">EgyptAir Admin System</h3>
-                        <p class="project-desc">
-                            Digitized manual processes for the Air Hospitality Sector, reducing document processing time by 45% for 200+ staff.
+                    <div class="work-card-body">
+                        <span class="work-type">Publishing Platform · Featured</span>
+                        <h3 class="work-title">Layout International</h3>
+                        <p class="work-desc">
+                            Publishing infrastructure built for real newsrooms. Unify print and digital production under one intelligent workflow. Lower cost per article, build and iterate faster using AI across your content lifecycle, and turn content into business value.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
+                        <div class="work-tags">
+                            <span class="wtag">Laravel</span>
+                            <span class="wtag">Vue.js</span>
+                            <span class="wtag">AI Integration</span>
+                            <span class="wtag">SaaS</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="icon-link" title="Internal System"><i data-lucide="lock"></i> Internal</a>
+                    </div>
+                    <div class="work-card-footer">
+                        <a href="https://www.layoutintl.com" target="_blank" class="work-visit">
+                            layoutintl.com <i data-lucide="arrow-up-right" size="14"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SaaS Applications -->
+                <div class="work-card fade-in-up">
+                    <div class="work-card-header">
+                        <div class="work-logo-wrap">
+                            <img src="assets/img/works/tog.png" alt="Tog.sa" class="work-logo work-logo--sm">
+                        </div>
+                        <a href="https://tog.sa/" target="_blank" class="work-link-btn">
+                            <i data-lucide="external-link" size="16"></i>
+                        </a>
+                    </div>
+                    <div class="work-card-body">
+                        <span class="work-type">SaaS Applications · Deployed Products</span>
+                        <h3 class="work-title">Cloud Products</h3>
+                        <div class="work-product">
+                            <h4 class="wp-name">Tog.sa — Cloud Accounting</h4>
+                            <p class="wp-desc">ZATCA-compliant e-invoicing & inventory management built for the Saudi market. Full ERP integration.</p>
+                            <a href="https://tog.sa/" target="_blank" class="wp-link"><i data-lucide="external-link" size="12"></i> tog.sa</a>
+                        </div>
+                        <div class="work-product">
+                            <h4 class="wp-name">AliBash — URL Shortener</h4>
+                            <p class="wp-desc">High-performance link analytics & QR code generation platform with real-time click tracking.</p>
+                            <a href="https://s.alibash.com/" target="_blank" class="wp-link"><i data-lucide="external-link" size="12"></i> s.alibash.com</a>
+                        </div>
+                        <div class="work-tags">
+                            <span class="wtag">Laravel</span>
+                            <span class="wtag">Vue.js</span>
+                            <span class="wtag">Analytics</span>
+                            <span class="wtag">ZATCA</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- EgyptAir -->
+                <div class="work-card fade-in-up">
+                    <div class="work-card-header">
+                        <div class="work-logo-wrap work-logo-icon">
+                            <i data-lucide="plane" size="28"></i>
+                        </div>
+                        <span class="work-badge work-badge--lock"><i data-lucide="lock" size="12"></i> Internal</span>
+                    </div>
+                    <div class="work-card-body">
+                        <span class="work-type">Corporate System · Internal</span>
+                        <h3 class="work-title">EgyptAir Admin System</h3>
+                        <p class="work-desc">
+                            Digitized and automated manual administrative processes for the Air Hospitality Sector. Reduced document processing time by 45% for 200+ staff members, with automated employee evaluation and document lifecycle management.
+                        </p>
+                        <div class="work-tags">
+                            <span class="wtag">Laravel</span>
+                            <span class="wtag">MySQL</span>
+                            <span class="wtag">Bootstrap</span>
+                            <span class="wtag">Internal</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience">
         <div class="container">
             <div class="section-header fade-in-up">
-                <span class="section-title">Career Path</span>
-                <h2 class="section-subtitle">Professional Journey.</h2>
+                <span class="section-eyebrow">Career Path</span>
+                <h2 class="section-title">Professional <span class="text-primary">Journey</span>.</h2>
             </div>
 
-            <div class="timeline fade-in-up">
-                <div class="timeline-item">
-                    <div class="timeline-date">Oct 2025 – Present</div>
-                    <h3 class="timeline-title">Software Engineer</h3>
-                    <div class="timeline-company">Loc Camp, Al Jizah, Egypt</div>
-                    <p>Focusing on high-performance backend solutions, code quality assurance, and driving technical innovation.</p>
+            <div class="exp-list">
+
+                <!-- Loc Camp -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <img src="assets/img/works/loc-camp.jpg" alt="Loc Camp" class="exp-logo">
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot exp-dot--active"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Software Engineer · Senior Back-end Developer</h3>
+                                <a href="https://loc-camp.com" target="_blank" class="exp-company">Loc Camp <i data-lucide="external-link" size="12"></i></a>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Oct 2025 – Present</span>
+                                <span class="exp-badge">Full-time · Hybrid</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> Al Jizah, Egypt</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Driving backend excellence at Loc Camp, building high-performance APIs and scalable server-side architectures. 
+                            Responsible for system design decisions, code quality standards, and delivering robust technical solutions 
+                            that power the platform's core operations. Collaborating closely with cross-functional teams to turn product visions into production-ready systems.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2024 – Sep 2025</div>
-                    <h3 class="timeline-title">Senior Back-end Developer</h3>
-                    <div class="timeline-company">Alsamel Holding Co., Kuwait (Remote)</div>
-                    <p>Led architecture for 8+ ERP domains. Optimized query performance by 40% and mentored junior developers.</p>
+                <!-- Const Tech -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <img src="assets/img/works/const-tech.jpg" alt="Const Tech" class="exp-logo">
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Senior Backend Engineer</h3>
+                                <a href="https://www.const-tech.org" target="_blank" class="exp-company">كواكب التقنية – Const Tech <i data-lucide="external-link" size="12"></i></a>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jul 2025 – Sep 2025</span>
+                                <span class="exp-badge">Full-time · Remote</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> Riyadh, Saudi Arabia</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Delivered senior-level backend engineering for Const Tech's platform solutions. Designed and implemented scalable APIs,
+                            optimized database performance, and ensured high availability across production environments serving clients in the Saudi market.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Nov 2023 – Mar 2024</div>
-                    <h3 class="timeline-title">Mid-Level Full Stack Developer</h3>
-                    <div class="timeline-company">Ibtikarat, Cairo</div>
-                    <p>Built scalable web apps and integrated payment gateways for e-commerce solutions.</p>
+                <!-- Alshamel Holding -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <img src="assets/img/works/alshamel-holding.jpeg" alt="Alshamel Holding" class="exp-logo">
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Alshamel Holding</h3>
+                                <span class="exp-company">Full-time · 1 yr 5 mos</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-badge">Full-time · Remote</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> Kuwait</span>
+                            </div>
+                        </div>
+
+                        <!-- Sub-roles -->
+                        <div class="exp-subroles">
+                            <div class="exp-subrole">
+                                <div class="exp-subrole-dot exp-subrole-dot--onsite"></div>
+                                <div>
+                                    <span class="exp-subrole-title">Back End Engineer</span>
+                                    <span class="exp-subrole-date">Jan 2025 – Aug 2025 · 8 mos</span>
+                                    <span class="exp-subrole-tag">On-site</span>
+                                </div>
+                            </div>
+                            <div class="exp-subrole">
+                                <div class="exp-subrole-dot"></div>
+                                <div>
+                                    <span class="exp-subrole-title">Sr. Full Stack Developer</span>
+                                    <span class="exp-subrole-date">Sep 2024 – Jan 2025 · 5 mos</span>
+                                    <span class="exp-subrole-tag exp-subrole-tag--remote">Remote</span>
+                                </div>
+                            </div>
+                            <div class="exp-subrole">
+                                <div class="exp-subrole-dot"></div>
+                                <div>
+                                    <span class="exp-subrole-title">Mid-level Full Stack Developer</span>
+                                    <span class="exp-subrole-date">Apr 2024 – Sep 2024 · 6 mos</span>
+                                    <span class="exp-subrole-tag exp-subrole-tag--remote">Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Contributed to cutting-edge projects that transform ideas into impactful digital solutions at Shamel Holding.
+                            Architected multi-tenant ERP covering 8+ business domains (Real Estate, HR, HMS). Optimized query performance by 40%,
+                            mentored junior developers, and led team to 60% improvement in workflow efficiency.
+                        </p>
+                        <div class="exp-tags">
+                            <span class="wtag">PHP</span>
+                            <span class="wtag">Laravel</span>
+                            <span class="wtag">Vue.js</span>
+                            <span class="wtag">Redis</span>
+                            <span class="wtag">MySQL</span>
+                            <span class="wtag">Multi-Tenancy</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Jan 2022 – Dec 2023</div>
-                    <h3 class="timeline-title">Junior Full Stack Developer</h3>
-                    <div class="timeline-company">EgyptAir, Cairo</div>
-                    <p>Developed administrative systems automating employee evaluation and document management.</p>
+                <!-- Ibtikarat -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <img src="assets/img/works/ibtikarat.jpeg" alt="Ibtikarat" class="exp-logo">
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Backend Engineer</h3>
+                                <span class="exp-company">ibtikarat | ابتكارات</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jan 2024 – Apr 2024 · 4 mos</span>
+                                <span class="exp-badge">Full-time · On-site</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> Cairo, Egypt</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Built scalable web applications and integrated payment gateways for e-commerce solutions. Developed RESTful APIs
+                            and contributed to system architecture decisions in a fast-paced product environment.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2021 – Jan 2022</div>
-                    <h3 class="timeline-title">Junior Full Stack Developer</h3>
-                    <div class="timeline-company">Impact Studios, UK (Remote)</div>
-                    <p>Collaborated with a global team to build and maintain responsive web applications.</p>
+                <!-- Sneakers Dubai (Freelance) -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <div class="exp-logo-placeholder">
+                            <i data-lucide="shopping-bag" size="24"></i>
+                        </div>
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Freelance Developer & Designer</h3>
+                                <span class="exp-company">Sneakers Dubai</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Jul 2022 – Feb 2023 · 8 mos</span>
+                                <span class="exp-badge">Freelance</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> Dubai</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Designed and developed the brand's digital presence, handling both WIX development and visual design through Photoshop
+                            to deliver a polished e-commerce experience for the Dubai market.
+                        </p>
+                        <div class="exp-tags">
+                            <span class="wtag">WIX</span>
+                            <span class="wtag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Studios -->
+                <div class="exp-item fade-in-up">
+                    <div class="exp-logo-col">
+                        <div class="exp-logo-placeholder">
+                            <i data-lucide="building-2" size="24"></i>
+                        </div>
+                    </div>
+                    <div class="exp-line-col">
+                        <div class="exp-dot"></div>
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-title">Junior Stack Developer</h3>
+                                <span class="exp-company">Impact Studios</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">Mar 2021 – Dec 2021 · 10 mos</span>
+                                <span class="exp-badge">Remote</span>
+                                <span class="exp-loc"><i data-lucide="map-pin" size="12"></i> UK</span>
+                            </div>
+                        </div>
+                        <p class="exp-desc">
+                            Collaborated with a global team to build and maintain responsive web applications. Gained hands-on experience with
+                            WIX design, Photoshop, and front-end development delivering projects for international clients.
+                        </p>
+                        <div class="exp-tags">
+                            <span class="wtag">WIX</span>
+                            <span class="wtag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-inner fade-in-up">
+                <h2>Ready to build something <span class="text-primary">great?</span></h2>
+                <p>I'm available for freelance projects and full-time roles. Let's create something impactful together.</p>
+                <div class="cta-btns">
+                    <a href="mailto:eslamabdelbasset1@gmail.com" class="btn btn-primary">
+                        <i data-lucide="mail" size="18"></i> Send an Email
+                    </a>
+                    <a href="assets/cv/islamAbdelbasset-Resume.pdf" download target="_blank" class="btn btn-outline">
+                        <i data-lucide="download" size="18"></i> Download Resume
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" style="padding-bottom: 8rem;">
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section-alt">
         <div class="container">
             <div class="section-header fade-in-up">
-                <span class="section-title">Contact</span>
-                <h2 class="section-subtitle">Let's build something <span class="text-primary">great</span>.</h2>
+                <span class="section-eyebrow">Get In Touch</span>
+                <h2 class="section-title">Let's build something<br><span class="text-primary">great together.</span></h2>
+                <p class="section-lead">Ready to transform your ideas into scalable systems? I'd love to hear about your project.</p>
             </div>
 
-            <div class="contact-container fade-in-up">
-                <div class="contact-info">
-                    <a target="_blank" href="mailto:eslamabdelbasset1@gmail.com" class="item">
-                        <i data-lucide="mail" class="skill-icon"></i>
-                        <div>
-                            <h5>Email</h5>
-                            <p>eslamabdelbasset1@gmail.com</p>
-                        </div>
-                    </a>
-                    
-                    <a target="_blank" href="https://www.linkedin.com/in/eslamabdelbasset/" class="item">
-                        <i data-lucide="linkedin" class="skill-icon"></i>
-                        <div>
-                            <h5>LinkedIn</h5>
-                            <p>in/eslamabdelbasset</p>
-                        </div>
-                    </a>
+            <div class="contact-grid fade-in-up">
+                <a href="mailto:eslamabdelbasset1@gmail.com" target="_blank" class="contact-card">
+                    <div class="contact-card-icon">
+                        <i data-lucide="mail" size="22"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>Email</h4>
+                        <p>eslamabdelbasset1@gmail.com</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" size="18" class="contact-arr"></i>
+                </a>
 
-                    <a target="_blank" href="https://github.com/eslamabdelbasset1" class="item">
-                        <i data-lucide="github" class="skill-icon"></i>
-                        <div>
-                            <h5>GitHub</h5>
-                            <p>@eslamabdelbasset1</p>
-                        </div>
-                    </a>
+                <a href="https://wa.me/201060838210" target="_blank" class="contact-card">
+                    <div class="contact-card-icon contact-card-icon--green">
+                        <i data-lucide="message-circle" size="22"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>WhatsApp</h4>
+                        <p>+20 106 083 8210</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" size="18" class="contact-arr"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/eslamabdelbasset/" target="_blank" class="contact-card">
+                    <div class="contact-card-icon contact-card-icon--blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>LinkedIn</h4>
+                        <p>Connect professionally</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" size="18" class="contact-arr"></i>
+                </a>
+
+                <a href="https://github.com/eslamabdelbasset1" target="_blank" class="contact-card">
+                    <div class="contact-card-icon contact-card-icon--accent">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>GitHub</h4>
+                        <p>@eslamabdelbasset1</p>
+                    </div>
+                    <i data-lucide="arrow-up-right" size="18" class="contact-arr"></i>
+                </a>
+
+                <div class="contact-card contact-card--info">
+                    <div class="contact-card-icon contact-card-icon--muted">
+                        <i data-lucide="clock" size="22"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>Response Time</h4>
+                        <p>I typically respond within 24 hours on business days. For urgent matters, reach me on WhatsApp.</p>
+                    </div>
                 </div>
 
-                <div class="contact-form-wrapper">
-                     <!-- Simple direct contact call to action instead of form for clean portfolio -->
-                     <div class="project-card" style="padding: 2rem; border-color: var(--primary);">
-                        <h3 style="margin-bottom: 1rem;">Open to Opportunities</h3>
-                        <p>
-                            I'm currently available for freelance projects and full-time roles. 
-                            If you're looking for a Senior Developer to help scale your product, let's talk.
-                        </p>
-                        <a target="_blank" href="mailto:eslamabdelbasset1@gmail.com" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-                            Send an Email
-                        </a>
-                        <a target="_blank" href="https://wa.me/201060838210" class="btn btn-outline" style="width: 100%; margin-top: 1rem; border-color: #22C55E; color: #22C55E;">
-                            <i data-lucide="message-circle"></i> WhatsApp
-                        </a>
-                     </div>
+                <div class="contact-card contact-card--info">
+                    <div class="contact-card-icon contact-card-icon--secondary">
+                        <i data-lucide="map-pin" size="22"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h4>Location & Availability</h4>
+                        <p>Based in Egypt (GMT+2). Available for remote work globally and open to travel.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer style="padding: 2rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
-        <div class="container">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="#hero" class="logo">&lt;Eslam <span>Abdelbasset</span> /&gt;</a>
             <p>&copy; <span id="current-year"></span> Eslam Abdelbasset. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/eslamabdelbasset1" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+                <a href="https://www.linkedin.com/in/eslamabdelbasset/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="mailto:eslamabdelbasset1@gmail.com"><i data-lucide="mail" size="18"></i></a>
+            </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script>
-        // Initialize Icons
         lucide.createIcons();
     </script>
 </body>

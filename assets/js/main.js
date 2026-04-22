@@ -1,76 +1,123 @@
 /*
-* --------------------------------------------------------------------------
-*  Anti-Gravity Portfolio - Main JS
-*  Vanilla JS, No Dependencies
-* --------------------------------------------------------------------------
-*/
+ * --------------------------------------------------------------------------
+ *  Eslam Abdelbasset Portfolio — Main JS v3.0
+ * --------------------------------------------------------------------------
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ----------------------------------------------------------------------
-    // Set Dynamic Copyright Year
-    // ----------------------------------------------------------------------
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-    
-    // ----------------------------------------------------------------------
+
+    // ------------------------------------------------------------------
+    // Dynamic Copyright Year
+    // ------------------------------------------------------------------
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // ------------------------------------------------------------------
     // Mobile Menu Toggle
-    // ----------------------------------------------------------------------
+    // ------------------------------------------------------------------
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            
-            // Toggle icon (optional, would require logic to switch icon name)
+            const isOpen = navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
         });
 
-        // Close menu when clicking a link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
             });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
         });
     }
 
-    // ----------------------------------------------------------------------
-    // Intersection Observer for Fade In Animations
-    // ----------------------------------------------------------------------
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
+    // ------------------------------------------------------------------
+    // Navbar Scroll Effect
+    // ------------------------------------------------------------------
+    const navbar = document.getElementById('navbar');
+    const handleScroll = () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     };
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+    // ------------------------------------------------------------------
+    // Active Nav Link on Scroll
+    // ------------------------------------------------------------------
+    const sections = document.querySelectorAll('section[id]');
+
+    const activateLink = () => {
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            const link = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+            if (link) {
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
             }
         });
-    }, observerOptions);
+    };
 
-    const animatedElements = document.querySelectorAll('.fade-in-up');
-    animatedElements.forEach(el => observer.observe(el));
+    window.addEventListener('scroll', activateLink, { passive: true });
 
+    // ------------------------------------------------------------------
+    // Intersection Observer — Fade In Animations
+    // ------------------------------------------------------------------
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                // Stagger delay based on position among siblings
+                const siblings = entry.target.parentElement
+                    ? [...entry.target.parentElement.querySelectorAll('.fade-in-up')]
+                    : [];
+                const idx = siblings.indexOf(entry.target);
+                entry.target.style.transitionDelay = `${idx * 0.08}s`;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '-40px 0px',
+        threshold: 0.08
+    });
 
-    // ----------------------------------------------------------------------
-    // Navbar Scroll Effect (Glassmorphism enhancer)
-    // ----------------------------------------------------------------------
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.5)';
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.background = 'rgba(15, 23, 42, 0.85)';
-        }
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+    // ------------------------------------------------------------------
+    // Smooth scroll for logo (back to top)
+    // ------------------------------------------------------------------
+    document.querySelectorAll('a[href="#hero"]').forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
 
 });
