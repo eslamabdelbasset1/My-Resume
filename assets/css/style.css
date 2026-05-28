@@ -44,7 +44,7 @@
   --transition-fast: all 0.2s ease;
 
   /* Fonts */
-  --font-main: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-main: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Shadows */
@@ -732,9 +732,14 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem 0.5rem;
-  width: 105px;
+  min-width: 105px;
+  width: max-content;
+  max-width: 140px;
+  flex: 1 1 auto;
   transition: var(--transition);
   text-align: center;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .skill-card:hover {
@@ -750,6 +755,8 @@ section {
   color: var(--text-muted);
   text-align: center;
   line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .skill-card:hover span {
@@ -1587,7 +1594,8 @@ section {
     position: relative;
   }
 
-  .exp-line-col {
+  .exp-line-col,
+  .exp-logo-col {
     display: none;
   }
 
@@ -1595,7 +1603,7 @@ section {
     content: '';
     position: absolute;
     left: -5px;
-    top: 5px;
+    top: 30px;
     width: 9px;
     height: 9px;
     border-radius: 50%;
